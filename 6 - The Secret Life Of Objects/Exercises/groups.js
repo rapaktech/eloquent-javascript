@@ -23,7 +23,7 @@ and creates a group that contains all the values produced by iterating over it. 
 
 class Group {
     constructor() {
-        this;
+        return this;
     }
     add (value) {
         if (value in this) {
