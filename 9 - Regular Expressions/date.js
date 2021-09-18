@@ -4,34 +4,44 @@ time. It is called Date. If you simply create a date object using new, you get
 the current date and time. */
 
 console.log(new Date());
-// → 2021-08-07T13:46:41.611Z
+// → 2021-09-13T16:35:44.586Z
 
 const a = new Date();
 console.log(a.getHours());
-// → 14
+// → 17
+
 console.log(a.getDay());
-// → 6
+// → 1
 
 console.log(a.getFullYear());
+// → 2021
 
 console.log(a.getMilliseconds());
+// → 603
 
 console.log(a.getMinutes());
+// → 35
 
 console.log(a.getMonth());
+// → 8
 
 console.log(a.getSeconds());
+// → 44
 
 console.log(a.getTime());
+// → 1631550944603
 
 console.log(a.getTimezoneOffset());
+// → -60
 
 console.log(a.getUTCDate());
+// → 13
 
 console.log(a.getUTCDay());
+// → 1
 
 console.log(Date.now());
-// → 1628344001631
+// → 1631550944631
 
 
 // You can also create an object for a specific time.
@@ -45,3 +55,11 @@ console.log(new Date(2013, 11, 19).getTime());
 // → 1387407600000
 console.log(new Date(1387407600000));
 // → 2013-12-18T23:00:00.000Z
+
+function getDate(string) {
+    let [_, month, day, year] = /(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+    return new Date(year, month - 1, day);
+}
+
+console.log(getDate("1-30-2003"));
+// → 2003-01-29T23:00:00.000Z

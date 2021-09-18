@@ -5,7 +5,7 @@ counts as a single element as far as the operators following it are concerned. *
 
 
 let cartoonCrying = /boo+(hoo+)+/i;
-console.log(cartoonCrying.test("Boohoohoohoo"));
+console.log(cartoonCrying.test("Boohoooohoohooo"));
 // → true
 
 
