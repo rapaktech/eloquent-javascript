@@ -1,3 +1,5 @@
+// Evaluating data as code
+
 const x = 1;
 function evalAndReturnX(code) {
     eval(code);

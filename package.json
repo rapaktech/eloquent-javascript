@@ -1,0 +1,23 @@
+{
+  "name": "Eloquent_JavaScript",
+  "version": "1.0.0",
+  "description": "**Each folder represents work done for each chapter completed in the book, an each contains a subfolder labelled \"Exercises\",  \r where I included my code solutions for the programming problems outlined at the end of each chapter.**",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapaktech/Eloquent_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rapaktech/Eloquent_JavaScript/issues"
+  },
+  "homepage": "https://github.com/rapaktech/Eloquent_JavaScript#readme",
+  "dependencies": {
+    "date-names": "^0.1.13"
+  }
+}

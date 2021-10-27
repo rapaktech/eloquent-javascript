@@ -1,3 +1,5 @@
+// Early improvised modules in JavaScript
+
 const weekDay = function() {
     const names = ["Sunday", "Monday", "Tuesday", "Wednesday",
     "Thursday", "Friday", "Saturday"];
@@ -7,5 +9,9 @@ const weekDay = function() {
     };
 }();
 
-console.log(weekDay.name(weekDay.number("Sunday")));
+
+console.log(weekDay.name(0));
 // → Sunday
+
+console.log(weekDay.number("Friday"));
+// → 5

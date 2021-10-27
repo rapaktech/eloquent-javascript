@@ -1,5 +1,5 @@
 new Promise((_, reject) => reject(new Error("Fail")))
-    .then(value => console.log("Handler 1"))
+    .then(value => console.log("Handler 1", value))
     .catch(reason => {
         console.log("Caught failure " + reason);
         return "nothing";

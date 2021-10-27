@@ -1,3 +1,5 @@
+// defining the require function
+
 require.cache = Object.create(null);
 
 function require(name) {

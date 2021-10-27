@@ -1,3 +1,5 @@
+// CommonJS
+
 const ordinal = require("ordinal");
 const {days, months} = require("date-names");
 
