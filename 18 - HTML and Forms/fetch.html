@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <script>
+        fetch("example/data.txt").then(response => {
+            console.log(response.status);
+            // → 200
+            console.log(response.headers.get("Content-Type"));
+            // → text/plain
+        });
+
+        fetch("example/data.txt").then(resp => resp.text()).then(text => console.log(text));
+        // → JavaScript
+
+        fetch("example/data.txt", {method: "DELETE"}).then(resp => {
+            console.log(resp.status);
+            // → 405
+        });
+
+        fetch("example/data.txt", {headers: {Range: "bytes=0-3"}})
+        .then(resp => resp.text())
+        .then(console.log);
+        // → Java
+
+    </script>
+</body>
+</html>

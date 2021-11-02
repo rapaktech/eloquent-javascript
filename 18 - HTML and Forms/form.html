@@ -1,0 +1,32 @@
+<form id="fone" action="">
+    Name: <input type="text" name="name"><br>
+    Password: <input type="password" name="password"><br>
+    <button type="submit">Log in</button>
+</form>
+    
+<script>
+    let form1 = document.querySelector("#fone");
+    form1.addEventListener("submit", event => {
+        event.preventDefault();
+    });
+    console.log(form1.elements[1].type);
+    // → password
+    console.log(form1.elements.password.type);
+    // → password
+    console.log(form1.elements.name.form == form1);
+    // → true
+</script>
+
+
+<form id="ftwo" action="">
+    Value: <input type="text" name="value">
+    <button type="submit">Save</button>
+</form>
+
+<script>
+    let form2 = document.querySelector("#ftwo");
+    form2.addEventListener("submit", event => {
+        event.preventDefault();
+        console.log("Saving value", form2.elements.value.value);
+    });
+</script>

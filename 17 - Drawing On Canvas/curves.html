@@ -1,0 +1,36 @@
+<canvas id="star-trek"></canvas>
+<script>
+    let cx = document.querySelector("#star-trek").getContext("2d");
+    cx.beginPath();
+    cx.moveTo(10, 90);
+    // control=(60,10) goal=(90,90)
+    cx.quadraticCurveTo(60, 10, 90, 90);
+    cx.lineTo(60, 10);
+    cx.closePath();
+    cx.stroke();
+</script>
+
+<canvas id="rectangle"></canvas>
+<script>
+let cr = document.querySelector("#rectangle").getContext("2d");
+cr.beginPath();
+cr.moveTo(10, 90);
+// control1=(10,10) control2=(90,10) goal=(50,90)
+cr.bezierCurveTo(10, 10, 90, 10, 50, 90);
+cr.lineTo(90, 10);
+cr.lineTo(10, 10);
+cr.closePath();
+cr.stroke();
+</script>
+
+<canvas id="circle"></canvas>
+<script>
+let cc = document.querySelector("#circle").getContext("2d");
+cc.beginPath();
+// center=(50,50) radius=40 angle=0 to 7
+cc.arc(50, 50, 40, 0, 7);
+// center=(150,50) radius=40 angle=0 to π½
+cc.arc(150, 50, 40, 0, 0.5 * Math.PI);
+cc.stroke();
+290
+</script>

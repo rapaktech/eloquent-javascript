@@ -1,0 +1,21 @@
+<canvas id="lines"></canvas>
+
+<script>
+    let cx = document.querySelector("#lines").getContext("2d");
+    cx.beginPath();
+    for (let y = 10; y < 100; y += 10) {
+        cx.moveTo(10, y);
+        cx.lineTo(90, y);
+    }
+    cx.stroke();
+</script>
+
+<canvas id="triangle"></canvas>
+<script>
+let ct = document.querySelector("#triangle").getContext("2d");
+    ct.beginPath();
+    ct.moveTo(50, 10);
+    ct.lineTo(10, 70);
+    ct.lineTo(90, 70);
+    ct.fill();
+</script>

@@ -1,0 +1,31 @@
+<label>
+    <input type="checkbox" id="purple"> Make this page purple
+</label>
+
+<script>
+    let checkbox = document.querySelector("#purple");
+    checkbox.addEventListener("change", () => {
+        document.body.style.background =
+        checkbox.checked ? "mediumpurple" : "";
+    });
+</script>
+
+Color:
+<label>
+    <input type="radio" name="color" value="orange"> Orange
+</label>
+<label>
+    <input type="radio" name="color" value="lightgreen"> Light Green
+</label>
+<label>
+    <input type="radio" name="color" value="lightblue"> Light Blue
+</label>
+
+<script>
+    let buttons = document.querySelectorAll("[name=color]");
+    for (let button of Array.from(buttons)) {
+        button.addEventListener("change", () => {
+            document.body.style.background = button.value;
+        });
+    }
+</script>

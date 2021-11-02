@@ -1,0 +1,33 @@
+<input id="fileone" type="file">
+
+<script>
+    let input1 = document.querySelector("#fileone");
+    input1.addEventListener("change", () => {
+        if (input1.files.length > 0) {
+            let file = input1.files[0];
+            console.log("You chose", file.name);
+            if (file.type) console.log("It has type", file.type);
+        }
+    });
+</script>
+
+<input id="filetwo" type="file" multiple>
+
+<script>
+    let input = document.querySelector("#filetwo");
+    input.addEventListener("change", () => {
+        for (let file of Array.from(input.files)) {
+            readFileText(file);
+        }
+    });
+
+    function readFileText(file) {
+        return new Promise((resolve, reject) => {
+            let reader = new FileReader();
+            reader.addEventListener("load", () => 
+                resolve(console.log("File '", file.name, "' starts with '", reader.result.slice(0, 20), "'")));
+            reader.addEventListener("error", () => reject(reader.error));
+            reader.readAsText(file);
+        });
+    }
+</script>
