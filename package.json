@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rapaktech/Eloquent_JavaScript#readme",
   "dependencies": {
-    "date-names": "^0.1.13"
+    "date-names": "^0.1.13",
+    "mime": "^2.2.0"
   }
 }

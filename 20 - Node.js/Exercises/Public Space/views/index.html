@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Space</title>
+</head>
+<body>
+    <h1>This is the Public Space homepage</h1>
+    <h2>More features in coming weeks!</h2>
+
+
+    <form id="form" action="" method="put">
+        Edit the public text file: <textarea name="data" id="data" cols="40" rows="20"></textarea>
+        <input type="submit" value="Save Changes">
+    </form>
+
+    <script>
+        window.onload = () => {
+            // get textarea
+            const textarea = document.getElementById('data');
+            const url = `http://localhost:8000`;
+
+            // Create request object
+            const request = new Request(url, {
+                    method: 'POST',
+                    body: null,
+                    headers: new Headers({
+                        'Content-Type': 'text/plain'
+                    })
+            });
+
+
+            // Pass request object to 'fetch'
+            fetch(request)
+            .then((res) => {
+                return res.text();
+            }).then((text) => {
+                textarea.value = text;
+            });
+        }
+
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            // Get data
+            const data = document.getElementById('data').value,
+            url = `http://localhost:8000`;
+
+            // Create request object
+            const request = new Request(url, {
+                method: 'PUT',
+                body: data,
+                headers: new Headers({
+                    'Content-Type': 'text/plain'
+                })
+            });
+
+            // Pass request object to 'fetch'
+            fetch(request)
+            .then((res) => {
+                return res.text();
+            }).then((text) => {
+                alert(text);
+            });
+        });
+    </script>
+</body>
+</html>
