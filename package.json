@@ -19,6 +19,10 @@
   "homepage": "https://github.com/rapaktech/Eloquent_JavaScript#readme",
   "dependencies": {
     "date-names": "^0.1.13",
-    "mime": "^2.2.0"
+    "ecstatic": "^4.1.4",
+    "mime": "^2.2.0",
+    "dijkstrajs": "^1.0.2",
+    "ini": "^2.0.0",
+    "ordinal": "^1.0.3"
   }
 }
